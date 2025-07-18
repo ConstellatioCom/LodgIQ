@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="pageTitle">Proposition Stratégie SEO - Pour LodgIQ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #3182ce 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+      .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+      .logo-img {
+            max-width: 250px;
+            height: auto;
+        }
+      
+      .lang-toggle-container {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+      }
+
+      .lang-button {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+      }
+
+      .lang-button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .hero {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+      .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #63b3ed, #90cdf4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+      .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+      .offers-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+      .offer-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            max-width: 960px;
+            width: 100%;
+        }
+
+      .offer-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #63b3ed, #90cdf4);
+            border-radius: 20px 20px 0 0;
+        }
+
+      .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #63b3ed;
+        }
+
+      .offer-title {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: #63b3ed;
+            font-weight: 600;
+            text-align: center;
+        }
+
+      .offer-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #90cdf4;
+            margin-top: 20px;
+            text-align: right;
+            opacity: 0.8;
+        }
+
+      .offer-description {
+            margin-bottom: 20px;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+      .offer-deliverables {
+            margin-top: 15px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            border-left: 3px solid #63b3ed;
+        }
+
+      .offer-deliverables ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+      .offer-deliverables li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+
+      .offer-deliverables li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #63b3ed;
+            font-weight: bold;
+        }
+
+      .methodology {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 60px 20px;
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+      .methodology h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: #63b3ed;
+        }
+
+      .phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+      .phase {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #63b3ed;
+            display: flex;
+            flex-direction: column;
+        }
+
+      .phase h3 {
+            color: #90cdf4;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+      .phase p {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+      .phase ul {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+      .phase li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+      .phase li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #63b3ed;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+          .hero h1 {
+                font-size: 2.2rem;
+            }
+          .hero p {
+                font-size: 1rem;
+            }
+          .methodology h2 {
+                font-size: 1.8rem;
+            }
+          .lang-toggle-container {
+                position: static;
+                transform: none;
+                margin-top: 20px;
+          }
+          .header-content {
+                flex-direction: column;
+          }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="logo.jpg" alt="Constellatio Web Marketing" class="logo-img" />
+            <div class="lang-toggle-container">
+                <button id="lang-toggle" class="lang-button">English</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="offers-grid">
+            <div class="offer-card">
+                <h3 class="offer-title" data-lang="offerTitle">Offre fondationnelle : stratégie d'autorité sémantique</h3>
+                <p class="offer-description" data-lang="offerObjective"><strong>Objectif :</strong> Aligner la présence digitale de LodgIQ avec sa vision de plateforme de stratégie commerciale unifiée, en construisant une autorité sémantique qui reflète son leadership et capte une audience de décideurs qualifiés.</p>
+                
+                <div class="offer-deliverables">
+                    <strong data-lang="deliverablesTitle">Formats de livrables</strong>
+                    <ul>
+                        <li data-lang="deliverable1">Audit d'autorité thématique (technique, contenu, entités)</li>
+                        <li data-lang="deliverable2">Feuille de route stratégique pour l'expansion de la visibilité</li>
+                        <li data-lang="deliverable3">Cartographie des objets de connaissance propres à LodgIQ (entités, attributs, relations)</li>
+                        <li>
+                            <span data-lang="deliverable4Title">Portefeuille d'actifs mobilisables pour le référencement naturel :</span>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li data-lang="deliverable4item1">Contenus élémentaires en langue naturelle (phrases-clés)</li>
+                                <li data-lang="deliverable4item2">Indications de balisage HTML</li>
+                                <li data-lang="deliverable4item3">Scripts de données structurées JSON-LD.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong data-lang="presentationTitle">Présentation</strong></p>
+                    <ul>
+                        <li data-lang="presentationItem">Atelier de restitution avec les parties prenantes</li>
+                    </ul>
+                </div>
+                <div class="offer-price" data-lang="price">6 000 € HT</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h1 data-lang="mainTitle">Proposition de stratégie SEO pour LodgIQ</h1>
+        </div>
+    </section>
+
+    <section class="methodology">
+        <div class="container">
+            <h2 data-lang="methodologyTitle">Méthode</h2>
+            <div class="phases">
+                <div class="phase">
+                    <h3 data-lang="phase1Title">Phase 1 : modélisation du Graphe de Connaissances de LodgIQ</h3>
+                    <ul>
+                        <li data-lang="phase1item1">Cartographie de ses entités : LodgIQ, MarketIQ, GroupIQ, etc.</li>
+                        <li data-lang="phase1item2">Définition des attributs et des relations sémantiques (ex: "GroupIQ est un produit de LodgIQ", "LodgIQ résout le problème des silos de données").</li>
+                        <li data-lang="phase1item3">Analyse de l'architecture sémantique de lodgiq.com.</li>
+                        <li data-lang="phase1item4">Identification des singularités de LodgIQ face à la concurrence.</li>
+                        <li data-lang="phase1item5">Identification des chiffres-clés</li>
+                    </ul>
+                    <p data-lang="phase1Objective"><strong>Objectif :</strong> Fournir à Google un plan détaillé de l'écosystème de LodgIQ pour qu'il comprenne non seulement ses activités, mais aussi son positionnement de leader sur la "stratégie commerciale unifiée".</p>
+                </div>
+                
+                <div class="phase">
+                    <h3 data-lang="phase2Title">Phase 2 : analyse de l'univers de recherche des décideurs</h3>
+                    <ul>
+                        <li data-lang="phase2item1">Identification des intentions de recherche des personas cibles (CCO, directeur des revenus, etc.).</li>
+                        <li data-lang="phase2item2">Analyse des requêtes informationnelles ("comment briser les silos de données") et transactionnelles ("meilleur RMS pour hôtel indépendant").</li>
+                        <li data-lang="phase2item3">Détection des "angles morts" de contenu face aux besoins du marché.</li>
+                    </ul>
+                    <p data-lang="phase2Objective"><strong>Objectif :</strong> Aligner la production de contenu de haute qualité de LodgIQ avec les questions précises que ses futurs clients se posent, pour devenir la réponse évidente à chaque étape de leur réflexion.</p>
+                </div>
+
+                <div class="phase">
+                    <h3 data-lang="phase3Title">Phase 3 : audit des fondamentaux techniques</h3>
+                    <ul>
+                        <li data-lang="phase3item1">Vérification de l'indexabilité et de l'accessibilité du site.</li>
+                        <li data-lang="phase3item2">Analyse des signaux techniques essentiels pour le SEO.</li>
+                        <li data-lang="phase3item3">Identification des points de friction techniques potentiels.</li>
+                    </ul>
+                    <p data-lang="phase3Objective"><strong>Objectif :</strong> S'assurer que le site ne présente aucun frein technique majeur à son référencement et offre une base saine pour les optimisations sémantiques.</p>
+                </div>
+                
+                <div class="phase">
+                    <h3 data-lang="phase4Title">Phase 4 : analyse concurrentielle et audit du profil de liens</h3>
+                    <ul>
+                        <li data-lang="phase4item1">Analyse des stratégies de contenu et de liens des concurrents principaux.</li>
+                        <li data-lang="phase4item2">Audit du profil de liens entrants (backlinks) de LodgIQ vs concurrents.</li>
+                        <li data-lang="phase4item3">Évaluation de la qualité et de la pertinence des domaines référents.</li>
+                        <li data-lang="phase4item4">Identification des faiblesses concurrentielles et des opportunités d'autorité.</li>
+                    </ul>
+                    <p data-lang="phase4Objective"><strong>Objectif :</strong> Comprendre les stratégies des concurrents et évaluer la force du profil de liens de LodgIQ pour définir un plan d'attaque précis et renforcer son autorité de domaine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-lang="footer">&copy; 2025 Constellatio Web Marketing</p>
+        </div>
+    </footer>
+
+    <script>
+        const languageContent = {
+            pageTitle: {
+                fr: "Proposition Stratégie SEO - Pour LodgIQ",
+                en: "SEO Strategy Proposal - For LodgIQ"
+            },
+            mainTitle: {
+                fr: "Proposition de stratégie SEO pour LodgIQ",
+                en: "SEO Strategy Proposal for LodgIQ"
+            },
+            offerTitle: {
+                fr: "Offre fondationnelle : stratégie d'autorité sémantique",
+                en: "Foundational Offer: Semantic Authority Strategy"
+            },
+            offerObjective: {
+                fr: "<strong>Objectif :</strong> Aligner la présence digitale de LodgIQ avec sa vision de plateforme de stratégie commerciale unifiée, en construisant une autorité sémantique qui reflète son leadership et capte une audience de décideurs qualifiés.",
+                en: "<strong>Objective:</strong> To align LodgIQ's digital presence with its vision of a unified commercial strategy platform, by building semantic authority that reflects its leadership and captures a qualified audience of decision-makers."
+            },
+            deliverablesTitle: {
+                fr: "Formats de livrables",
+                en: "Deliverable Formats"
+            },
+            deliverable1: {
+                fr: "Audit d'autorité thématique (technique, contenu, entités)",
+                en: "Thematic Authority Audit (Technical, Content, Entities)"
+            },
+            deliverable2: {
+                fr: "Feuille de route stratégique pour l'expansion de la visibilité",
+                en: "Strategic Roadmap for Visibility Expansion"
+            },
+            deliverable3: {
+                fr: "Cartographie des objets de connaissance propres à LodgIQ (entités, attributs, relations)",
+                en: "Mapping of LodgIQ's own knowledge objects (entities, attributes, relationships)"
+            },
+            deliverable4Title: {
+                fr: "Portefeuille d'actifs mobilisables pour le référencement naturel :",
+                en: "Portfolio of assets for natural referencing:"
+            },
+            deliverable4item1: {
+                fr: "Contenus élémentaires en langue naturelle (phrases-clés)",
+                en: "Core natural language content (key phrases)"
+            },
+            deliverable4item2: {
+                fr: "Indications de balisage HTML",
+                en: "HTML markup guidelines"
+            },
+            deliverable4item3: {
+                fr: "Scripts de données structurées JSON-LD.",
+                en: "JSON-LD structured data scripts."
+            },
+            presentationTitle: {
+                fr: "Présentation",
+                en: "Presentation"
+            },
+            presentationItem: {
+                fr: "Atelier de restitution avec les parties prenantes",
+                en: "Strategy presentation workshop with stakeholders"
+            },
+            price: {
+                fr: "6 000 € HT",
+                en: "$6,500 USD (excl. tax)"
+            },
+            methodologyTitle: {
+                fr: "Méthode",
+                en: "Methodology"
+            },
+            phase1Title: {
+                fr: "Phase 1 : modélisation du Graphe de Connaissances de LodgIQ",
+                en: "Phase 1: Modeling the LodgIQ Knowledge Graph"
+            },
+            phase1item1: {
+                fr: "Cartographie de ses entités : LodgIQ, MarketIQ, GroupIQ, etc.",
+                en: "Mapping its entities: LodgIQ, MarketIQ, GroupIQ, etc."
+            },
+            phase1item2: {
+                fr: 'Définition des attributs et des relations sémantiques (ex: "GroupIQ est un produit de LodgIQ", "LodgIQ résout le problème des silos de données").',
+                en: 'Defining attributes and semantic relationships (e.g., "GroupIQ is a product of LodgIQ", "LodgIQ solves the data silo problem").'
+            },
+            phase1item3: {
+                fr: "Analyse de l'architecture sémantique de lodgiq.com.",
+                en: "Analysis of the semantic architecture of lodgiq.com."
+            },
+            phase1item4: {
+                fr: "Identification des singularités de LodgIQ face à la concurrence.",
+                en: "Identifying LodgIQ's unique features against the competition."
+            },
+            phase1item5: {
+                fr: "Identification des chiffres-clés",
+                en: "Identification of key figures"
+            },
+            phase1Objective: {
+                fr: '<strong>Objectif :</strong> Fournir à Google un plan détaillé de l\'écosystème de LodgIQ pour qu\'il comprenne non seulement ses activités, mais aussi son positionnement de leader sur la "stratégie commerciale unifiée".',
+                en: '<strong>Objective:</strong> To provide Google with a detailed plan of the LodgIQ ecosystem so it understands not only its activities but also its leadership position on "unified commercial strategy".'
+            },
+            phase2Title: {
+                fr: "Phase 2 : analyse de l'univers de recherche des décideurs",
+                en: "Phase 2: Analysis of the Decision-Makers' Search Universe"
+            },
+            phase2item1: {
+                fr: "Identification des intentions de recherche des personas cibles (CCO, directeur des revenus, etc.).",
+                en: "Identification of target personas' search intents (CCO, Director of Revenue, etc.)."
+            },
+            phase2item2: {
+                fr: 'Analyse des requêtes informationnelles ("comment briser les silos de données") et transactionnelles ("meilleur RMS pour hôtel indépendant").',
+                en: 'Analysis of informational queries ("how to break data silos") and transactional queries ("best RMS for independent hotel").'
+            },
+            phase2item3: {
+                fr: 'Détection des "angles morts" de contenu face aux besoins du marché.',
+                en: 'Detection of content gaps regarding market needs.'
+            },
+            phase2Objective: {
+                fr: "<strong>Objectif :</strong> Aligner la production de contenu de haute qualité de LodgIQ avec les questions précises que ses futurs clients se posent, pour devenir la réponse évidente à chaque étape de leur réflexion.",
+                en: "<strong>Objective:</strong> To align LodgIQ's high-quality content production with the precise questions its future clients are asking, to become the obvious answer at every stage of their consideration process."
+            },
+            phase3Title: {
+                fr: "Phase 3 : audit des fondamentaux techniques",
+                en: "Phase 3: Technical Fundamentals Audit"
+            },
+            phase3item1: {
+                fr: "Vérification de l'indexabilité et de l'accessibilité du site.",
+                en: "Verification of site indexability and accessibility."
+            },
+            phase3item2: {
+                fr: "Analyse des signaux techniques essentiels pour le SEO.",
+                en: "Analysis of essential technical signals for SEO."
+            },
+            phase3item3: {
+                fr: "Identification des points de friction techniques potentiels.",
+                en: "Identification of potential technical friction points."
+            },
+            phase3Objective: {
+                fr: "<strong>Objectif :</strong> S'assurer que le site ne présente aucun frein technique majeur à son référencement et offre une base saine pour les optimisations sémantiques.",
+                en: "<strong>Objective:</strong> To ensure the site has no major technical barriers to its SEO and provides a healthy foundation for semantic optimizations."
+            },
+            phase4Title: {
+                fr: "Phase 4 : analyse concurrentielle et audit du profil de liens",
+                en: "Phase 4: Competitive Analysis and Link Profile Audit"
+            },
+            phase4item1: {
+                fr: "Analyse des stratégies de contenu et de liens des concurrents principaux.",
+                en: "Analysis of the content and link strategies of main competitors."
+            },
+            phase4item2: {
+                fr: "Audit du profil de liens entrants (backlinks) de LodgIQ vs concurrents.",
+                en: "Audit of LodgIQ's backlink profile vs. competitors."
+            },
+            phase4item3: {
+                fr: "Évaluation de la qualité et de la pertinence des domaines référents.",
+                en: "Evaluation of the quality and relevance of referring domains."
+            },
+            phase4item4: {
+                fr: "Identification des faiblesses concurrentielles et des opportunités d'autorité.",
+                en: "Identification of competitive weaknesses and authority opportunities."
+            },
+            phase4Objective: {
+                fr: "<strong>Objectif :</strong> Comprendre les stratégies des concurrents et évaluer la force du profil de liens de LodgIQ pour définir un plan d'attaque précis et renforcer son autorité de domaine.",
+                en: "<strong>Objective:</strong> To understand competitors' strategies and assess the strength of LodgIQ's link profile to define a precise plan of attack and strengthen its domain authority."
+            },
+            footer: {
+                fr: "&copy; 2025 Constellatio Web Marketing",
+                en: "&copy; 2025 Constellatio Web Marketing"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentLang = 'fr';
+            const langToggleButton = document.getElementById('lang-toggle');
+
+            function updateLanguage(lang) {
+                document.querySelectorAll('[data-lang]').forEach(element => {
+                    const key = element.getAttribute('data-lang');
+                    if (languageContent[key] && languageContent[key][lang]) {
+                        element.innerHTML = languageContent[key][lang];
+                    }
+                });
+                document.documentElement.lang = lang;
+            }
+
+            langToggleButton.addEventListener('click', () => {
+                if (currentLang === 'fr') {
+                    currentLang = 'en';
+                    langToggleButton.textContent = 'Français';
+                } else {
+                    currentLang = 'fr';
+                    langToggleButton.textContent = 'English';
+                }
+                updateLanguage(currentLang);
+            });
+
+            // Initial animation
+            const elementsToAnimate = document.querySelectorAll('.offer-card,.phase');
+            elementsToAnimate.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease-out';
+                
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+
+            // Set initial language
+            updateLanguage(currentLang);
+        });
+    </script>
+</body>
+</html>
